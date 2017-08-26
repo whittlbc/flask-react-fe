@@ -24,9 +24,9 @@
 
 Open 2 terminal tabs, one for running sass and the other for running the app.
 
-**Running sass**:       `$ npm run sass`<br>
+**Running sass**: `npm run sass`<br>
 
-**Running the app**:    `$ npm start`<br>
+**Running the app**: `npm start`<br>
 
 ## License
 
