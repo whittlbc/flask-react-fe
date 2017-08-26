@@ -4,21 +4,21 @@
 
 1. Clone the repo
 
-   ```
-   $ git clone https://github.com/whittlbc/flask-react-fe && cd flask-react-fe
-   ```
+```
+$ git clone https://github.com/whittlbc/flask-react-fe && cd flask-react-fe
+```
 
 2. Install node modules
 
-   ```
-   $ npm install
-   ```
+```
+$ npm install
+```
 
 3. Install sass
 
-   ```
-   $ gem install sass
-   ```
+```
+$ gem install sass
+```
 
 ## Usage
 
