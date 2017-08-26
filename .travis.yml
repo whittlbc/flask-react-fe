@@ -1,0 +1,25 @@
+sudo: false
+node_js:
+- 6
+install:
+- gem install sass
+- mkdir -p src/styles/cssf
+- npm install -g codecov
+- npm install
+cache:
+  directories:
+  - node_modules
+script:
+- npm run sass:build
+- npm test -- --coverage
+- npm run build
+after_success:
+- codecov
+deploy:
+  provider: heroku
+  api_key:
+    secure: <API_KEY>
+  app: <HEROKU_APP_NAME>
+  skip_cleanup: true
+  on:
+    repo: <TEAM>/<REPO>

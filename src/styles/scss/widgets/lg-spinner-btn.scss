@@ -1,0 +1,45 @@
+.lg-spinner-btn {
+  position: relative;
+
+  button {
+    width: 100%;
+    background-color: $primary;
+    border-radius: 3px;
+    height: 44px;
+    text-align: center;
+    font-family: Avenir-Next-Medium;
+    outline: none;
+    border: none;
+    color: #fff;
+
+    &:hover {
+      background-color: $primary; // should be $primary-hover
+    }
+
+    &:active {
+      background-color: $primary;
+    }
+  }
+
+  .horiz-spinner {
+    display: none;
+    top: 13px;
+    left: calc((100% - 70px)/2);
+  }
+
+  &.loading {
+    button {
+      color: transparent;
+    }
+
+    .horiz-spinner {
+      display: block;
+    }
+  }
+
+  &.complete {
+    button {
+      background-color: $tertiary;
+    }
+  }
+}

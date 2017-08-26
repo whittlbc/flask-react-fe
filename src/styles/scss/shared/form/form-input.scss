@@ -1,0 +1,38 @@
+.form-input {
+  background-color: #fff;
+  box-shadow: none;
+  outline: none;
+  border: 1px solid #dedede;
+  color: $default-dark;
+  width: 100%;
+
+  &.invalid-shadow {
+    box-shadow: 0 0 4px 2px $primary;
+  }
+
+  &.invalid-border {
+    border: 2px solid $red;
+  }
+}
+
+input.form-input {
+  border: none;
+  border-radius: 3px;
+  height: 44px;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+textarea.form-input {
+  border-radius: 4px;
+  padding: 10px 12px;
+  resize: none;
+  font-size: 14.5px;
+
+  &.invalid-shadow {
+    box-shadow: 0 0 2px 1px $red;
+  }
+}
