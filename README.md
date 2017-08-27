@@ -1,4 +1,4 @@
-# Flask-React Front-end
+# Flask React Front-end
 
 ## Installation
 
