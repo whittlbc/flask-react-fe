@@ -1,6 +1,5 @@
 {
   "root": "build/",
-  "https_only": true,
   "routes": {
      "/favicon.ico": "/favicon.ico",
      "/fonts/*": "/fonts/",
@@ -24,7 +23,10 @@
   },
   "proxies": {
     "/api/": {
-      "origin": "http://localhost:5000/api"
+      "origin": "http://<HEROKU_APP_NAME>.herokuapp.com/api"
+    },
+    "/.well-known/": {
+      "origin": "http://<HEROKU_APP_NAME>.herokuapp.com/.well-known"
     }
   }
 }

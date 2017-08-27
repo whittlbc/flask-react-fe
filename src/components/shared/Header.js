@@ -55,7 +55,7 @@ class Header extends Component {
         <nav className="header-nav">
           <div className="header-left">
             <a href="/">
-              <img alt="MyAppName" src="" />
+              <img alt="Logo" src="" />
             </a>
           </div>
           <div className="header-right">
