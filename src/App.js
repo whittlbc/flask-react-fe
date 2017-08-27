@@ -5,11 +5,6 @@ import Footer from './components/shared/footers/Footer';
 import Main from './Main';
 
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div id="appContainer" className={document.location.pathname.split('/')[1]}>

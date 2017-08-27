@@ -3,31 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "immutable": "^3.8.1",
     "jquery": "^3.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.1",
     "whatwg-fetch": "2.0.3"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ]
-  },
   "devDependencies": {
     "enzyme": "2.9.1",
     "eslint": "^4.3.0",
     "eslint-plugin-react": "^7.1.0",
     "hjson": "^3.1.0",
-    "react-addons-test-utils": "15.6.0",
-    "react-scripts": "1.0.7",
-    "react-test-renderer": "15.6.1"
+    "react-scripts": "1.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && ./node_modules/hjson/bin/hjson -j static.hjson > static.json",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss/index.scss:src/styles/css/index.css",
     "sass:build": "sass src/styles/scss/index.scss:src/styles/css/index.css"
