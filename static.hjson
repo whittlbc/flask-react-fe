@@ -22,9 +22,11 @@
     }
   },
   "proxies": {
+    // Proxy for API request
     "/api/": {
       "origin": "http://<HEROKU_APP_NAME>.herokuapp.com/api"
     },
+    // Proxy for LetsEncrypt certificate registration
     "/.well-known/": {
       "origin": "http://<HEROKU_APP_NAME>.herokuapp.com/.well-known"
     }
