@@ -2,6 +2,7 @@
   Wrapper around whatwg-fetch for making ajax requests
 
   Usage example (no usage difference between get/post/put/delete):
+    import Ajax from '../rel/path/to/Ajax';
 
     Ajax.get('/api/users', { company: 'My Company' })
       .then((resp) => resp.json()) // unpack json response data
