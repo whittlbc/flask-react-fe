@@ -105,7 +105,7 @@ http://www.sonders.co/.well-known/acme-challenge/xxxxxxxxxxxx-yyyy.zzzzzzzzzzzzz
 aaaaaaaaaaaa-bbbb.cccccccccccccccccccc
 ```
 
-If you're using (flask-react-be)[https://github.com/whittlbc/flask-react-be] for your server, there's already a route set up to handle this certificate verification. The only thing that needs to be done is to set the following environment variables on your Heroku-hosted server-side app:
+If you're using [flask-react-be](https://github.com/whittlbc/flask-react-be) for your server, there's already a route set up to handle this certificate verification. The only thing that needs to be done is to set the following environment variables on your Heroku-hosted server-side app:
 
 ```
 LETSENCRYPT_ROUTE_KEY: value shown as xxxxxxxxxxxx-yyyy.zzzzzzzzzzzzzzzzzzz above
@@ -139,7 +139,7 @@ $ heroku certs:info -a this-heroku-app-name
     a. Change each of your `"origin"` proxy keys to have a `https` scheme.
     b. Add the following key-val pair: `"https_only": true`
     
-**If using (flask-react-be)[https://github.com/whittlbc/flask-react-be] for your server-side app, give its Heroku app the following environment variable:**
+**If using [flask-react-be](https://github.com/whittlbc/flask-react-be) for your server-side app, give its Heroku app the following environment variable:**
 
 ```
 REQUIRE_SSL: true
