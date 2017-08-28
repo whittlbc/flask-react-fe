@@ -2,10 +2,10 @@
 
 ## Requirements
 
-npm
-node.js
-ruby
-sass
+* npm
+* node.js
+* ruby
+* sass
 
 ## Installation
 
