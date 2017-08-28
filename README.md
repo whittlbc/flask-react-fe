@@ -136,7 +136,7 @@ $ heroku certs:info -a this-heroku-app-name
 
 **Make the following modifications to your `static.hjson` file:**
 
-- Change each of your `"origin"` proxy keys to have a `https` scheme.
+- Change each of your `"origin"` proxy keys to have an `https` scheme.
 - Add the following key-val pair: `"https_only": true`
     
 **If using [flask-react-be](https://github.com/whittlbc/flask-react-be) for your server-side app, give its Heroku app the following environment variable:**
@@ -154,7 +154,7 @@ $ heroku domains:add mydomain.com -a this-heroku-app-name
 
 You should then have 2 DNS targets provided to you by Heroku that look something `www.mydomain.com.herokudns.com` and `mydomain.com.herokudns.com`, respectively.
 
-**Add a `CNAME` record to your domain with a Host of `*` that points to `mydomain.com.herokudns.com`. Optionally, you can then add domain forwarding to `https://www.mydomain.com`.**
+Then add a `CNAME` record to your domain with a Host of `*` that points to `mydomain.com.herokudns.com`. Optionally, you can then add domain forwarding to `https://www.mydomain.com`.
 
 ## License
 
