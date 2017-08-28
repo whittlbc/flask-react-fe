@@ -136,8 +136,8 @@ $ heroku certs:info -a this-heroku-app-name
 
 **Make the following modifications to your `static.hjson` file:**
 
-    a. Change each of your `"origin"` proxy keys to have a `https` scheme.
-    b. Add the following key-val pair: `"https_only": true`
+- Change each of your `"origin"` proxy keys to have a `https` scheme.
+- Add the following key-val pair: `"https_only": true`
     
 **If using [flask-react-be](https://github.com/whittlbc/flask-react-be) for your server-side app, give its Heroku app the following environment variable:**
 
