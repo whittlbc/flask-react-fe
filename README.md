@@ -84,7 +84,7 @@ Before pushing to Heroku, make sure to change the `<HEROKU_APP_NAME>` inside `st
 
 Once you have a domain name secured for your site, you can set up SSL support with LetsEncrypt and certbot.
 
-1. Install `certbot` and start the certificate creation process
+**Install `certbot` and start the certificate creation process**
 
 ```
 $ brew install certbot
@@ -94,7 +94,7 @@ $ brew install certbot
 $ sudo certbot certonly --manual
 ```
 
-2. Follow the instructions and enter the name of the domain you want to secure (e.g. `www.mydomain.com`).
+**Follow the instructions and enter the name of the domain you want to secure (e.g. `www.mydomain.com`).**
 
 It should then ask you to make sure your web server displays a certain text value at a specified url on your site:
 
@@ -116,13 +116,13 @@ Wait a minute for those environment variables to take effect, and then press ENT
 
 If all goes well, it should tell you congratulations and give you the location of the created certificate.
 
-3. Add the SSL Endpoint add-on to our Heroku-hosted React app:
+**Add the SSL Endpoint add-on to our Heroku-hosted React app:**
 
 ```
 $ heroku addons:create ssl:endpoint -a this-heroku-app-name
 ```
 
-4. Upload our certificate to Heroku:
+**Upload your certificate to Heroku**
 
 ```
 $ heroku certs:add /etc/letsencrypt/live/www.mydomain.com/fullchain.pem /etc/letsencrypt/live/www.mydomain.com/privkey.pem -a this-heroku-app-name
@@ -134,18 +134,18 @@ To verify this worked, you can run the following and see the details of your upl
 $ heroku certs:info -a this-heroku-app-name
 ```
 
-5. Make the following modifications to your `static.hjson` file:
+**Make the following modifications to your `static.hjson` file:**
 
     a. Change each of your `"origin"` proxy keys to have a `https` scheme.
     b. Add the following key-val pair: `"https_only": true`
     
-6. If using (flask-react-be)[https://github.com/whittlbc/flask-react-be] for your server-side app, give its Heroku app the following environment variable:
+**If using (flask-react-be)[https://github.com/whittlbc/flask-react-be] for your server-side app, give its Heroku app the following environment variable:**
 
 ```
 REQUIRE_SSL: true
 ```
 
-7. Add your custom domain to your Heroku app:
+**Add your custom domain to your Heroku app:**
 
 ```
 $ heroku domains:add www.mydomain.com -a this-heroku-app-name
@@ -154,7 +154,7 @@ $ heroku domains:add mydomain.com -a this-heroku-app-name
 
 You should then have 2 DNS targets provided to you by Heroku that look something `www.mydomain.com.herokudns.com` and `mydomain.com.herokudns.com`, respectively.
 
-8. Add a `CNAME` record to your domain with a Host of `*` that points to `mydomain.com.herokudns.com`. Optionally, you can then add domain forwarding to `https://www.mydomain.com`.
+**Add a `CNAME` record to your domain with a Host of `*` that points to `mydomain.com.herokudns.com`. Optionally, you can then add domain forwarding to `https://www.mydomain.com`.**
 
 ## License
 
